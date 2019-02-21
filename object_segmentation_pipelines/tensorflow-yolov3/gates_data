@@ -1,0 +1,515 @@
+External ID,outer_x,outer_y,outer_width,outer_height,class_id
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0015.JPG,402,65,613,619,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0158.JPG,375,136,520,511,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0244.JPG,533,312,319,338,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0367.JPG,597,344,285,284,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0374.JPG,359,128,592,584,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0396.JPG,567,294,153,292,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0861.JPG,337,425,234,273,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1128.JPG,472,175,290,558,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1546.JPG,580,391,228,257,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1580.JPG,465,383,293,297,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2678.JPG,257,107,687,647,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2771.JPG,439,449,239,262,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3598.JPG,648,375,212,218,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3788.JPG,442,71,322,658,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4372.JPG,575,223,373,391,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3798.JPG,504,165,256,517,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4543.JPG,399,39,639,743,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5204.JPG,434,224,366,533,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5245.JPG,375,423,141,212,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5342.JPG,418,199,257,608,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5371.JPG,414,379,81,257,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5465.JPG,602,235,184,412,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5649.JPG,342,88,643,675,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5699.JPG,470,338,258,257,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5935.JPG,571,316,176,258,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6187.JPG,558,301,211,400,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6191.JPG,511,255,250,470,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6793 (1).JPG,562,287,145,419,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6799 (1).JPG,554,160,219,593,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7053 (1).JPG,454,366,252,262,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7093.JPG,441,137,515,519,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7117 (1).JPG,632,366,255,259,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7291 (1).JPG,403,252,423,463,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7332.JPG,494,214,359,389,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7460 (1).JPG,569,352,153,313,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7524 (1).JPG,623,316,106,322,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7733.JPG,430,242,325,470,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7991 (1).JPG,577,396,315,338,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8169 (1).JPG,614,426,103,313,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8178 (1).JPG,611,69,229,746,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8193.JPG,450,15,487,712,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8229.JPG,491,22,335,688,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8253.JPG,575,248,94,306,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8278.JPG,662,254,133,375,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8534.JPG,463,154,388,628,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8607 (1).JPG,527,403,153,257,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8734.JPG,619,341,225,256,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0127.JPG,343,0,468,725,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0269.JPG,380,284,332,382,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0646.JPG,445,115,304,653,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0699.JPG,723,326,109,213,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1123.JPG,453,120,340,650,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1478.JPG,629,270,140,449,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1551.JPG,482,388,237,259,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1937.JPG,377,103,495,572,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1958.JPG,489,234,385,406,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2100.JPG,507,337,179,297,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2160.JPG,524,273,187,479,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2232.JPG,373,406,257,286,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2633.JPG,420,298,365,392,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2715.JPG,270,127,664,630,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2763.JPG,469,372,338,356,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3720.JPG,418,258,432,436,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4154.JPG,568,225,181,411,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4388.JPG,478,99,600,628,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4473.JPG,598,268,278,279,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4955.JPG,530,383,262,274,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5080.JPG,380,273,464,471,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5692.JPG,467,333,250,254,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5827.JPG,516,268,291,320,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5981.JPG,390,206,239,406,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6292.JPG,535,409,249,281,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6339.JPG,361,383,255,281,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3250.JPG,469,362,143,254,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6399.JPG,455,440,250,256,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6596.JPG,297,68,539,635,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6800.JPG,532,301,203,260,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6819.JPG,471,230,299,339,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6858.JPG,499,258,374,401,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6881.JPG,529,315,217,252,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6913.JPG,279,14,649,797,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6951.JPG,545,152,206,458,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7076.JPG,526,285,280,310,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7105 (1).JPG,508,340,323,328,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7195 (1).JPG,486,370,322,316,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7507.JPG,533,267,283,335,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7528.JPG,518,254,397,413,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7806 (1).JPG,549,373,338,344,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7845.JPG,426,14,349,840,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7851.JPG,653,25,394,838,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7878.JPG,247,431,92,223,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7926.JPG,372,124,459,641,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8225.JPG,378,1,502,754,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8238 (1).JPG,522,333,171,392,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8453.JPG,553,307,181,225,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8526.JPG,658,340,151,241,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8636 (1).JPG,396,94,284,583,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8686.JPG,439,268,248,386,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8714.JPG,586,323,230,253,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8808.JPG,537,160,403,609,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9038.JPG,535,272,375,398,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9067.JPG,385,147,524,596,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9232.JPG,198,150,491,574,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9595.JPG,408,255,328,335,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9655.JPG,171,13,688,727,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9934.JPG,579,272,321,327,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0029.JPG,337,56,667,645,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1143.JPG,458,357,107,213,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1238.JPG,565,292,237,366,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1741.JPG,589,179,125,528,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1861.JPG,592,393,114,185,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1868.JPG,529,319,172,289,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2078.JPG,470,230,338,411,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2090.JPG,499,213,304,468,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2214.JPG,442,295,345,410,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2624.JPG,463,404,248,271,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2769.JPG,459,457,244,261,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2865.JPG,530,282,229,384,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3642.JPG,549,343,149,152,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3651.JPG,660,333,184,186,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3829.JPG,550,336,315,319,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3917.JPG,210,306,287,304,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3965.JPG,465,174,517,551,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4273.JPG,417,227,307,381,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4360.JPG,565,260,243,254,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4418.JPG,628,268,267,267,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4509.JPG,481,256,297,302,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4623.JPG,420,281,178,265,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4744.JPG,566,230,79,372,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5143.JPG,428,249,435,482,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5205.JPG,446,209,376,555,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5207.JPG,417,152,437,620,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5215.JPG,377,274,310,447,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5308.JPG,413,339,131,239,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5317.JPG,439,346,110,219,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5446.JPG,535,241,157,414,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5859.JPG,574,277,278,316,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6110.JPG,543,187,110,430,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6302.JPG,454,329,372,427,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6310.JPG,362,160,567,664,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6551.JPG,318,215,421,467,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6995 (1).JPG,457,307,331,374,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7081.JPG,251,17,858,801,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7202 (1).JPG,421,301,408,398,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7275.JPG,572,307,180,230,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7461.JPG,480,82,418,618,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7595.JPG,435,287,311,364,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7612.JPG,476,356,249,289,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7643 (1).JPG,517,303,288,476,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7651.JPG,476,302,265,342,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7912 (1).JPG,300,152,633,620,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8141 (1).JPG,664,453,114,255,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8218 (1).JPG,506,140,257,590,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8379.JPG,550,213,466,487,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8510.JPG,732,346,162,226,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8591 (1).JPG,439,328,193,333,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8679.JPG,523,343,161,248,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8683 (1).JPG,581,43,282,734,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8684 (1).JPG,529,59,268,715,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8719.JPG,562,291,324,343,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9081.JPG,424,337,273,327,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9209.JPG,105,111,636,631,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9217.JPG,215,103,648,665,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9572.JPG,368,186,595,562,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9688.JPG,311,170,559,528,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9995.JPG,643,246,311,307,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0212.JPG,241,0,810,721,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0444.JPG,399,194,420,513,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0481.JPG,256,105,610,669,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0592.JPG,505,263,304,345,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0594.JPG,502,263,295,339,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1870.JPG,535,278,201,348,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2190.JPG,441,259,300,505,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2384.JPG,500,422,119,186,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2632.JPG,413,326,330,358,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2971.JPG,626,470,76,247,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3393.JPG,434,203,404,412,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3709.JPG,348,235,494,502,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3822.JPG,177,207,437,546,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3923.JPG,387,259,342,368,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4010.JPG,605,320,68,282,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4011.JPG,591,329,74,270,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4034.JPG,420,104,548,642,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4215.JPG,532,79,388,653,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4282.JPG,570,264,249,300,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4676.JPG,537,181,215,460,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4765.JPG,545,180,167,540,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4975.JPG,508,335,357,370,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5470.JPG,533,211,205,456,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5783.JPG,401,263,332,337,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5787.JPG,399,245,364,368,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5891.JPG,498,57,408,647,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6007.JPG,437,167,215,458,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6317.JPG,377,167,514,573,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6428.JPG,293,61,745,717,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6431.JPG,357,104,681,655,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6987 (1).JPG,427,387,252,283,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7014 (1).JPG,294,81,607,650,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7202.JPG,537,63,284,708,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7297 (1).JPG,458,310,345,374,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7564.JPG,302,261,435,477,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7620.JPG,415,319,310,355,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7683.JPG,378,87,517,686,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7738.JPG,317,18,599,824,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7839.JPG,430,299,135,408,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7900 (1).JPG,563,441,290,287,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8046 (1).JPG,535,111,360,620,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8064.JPG,164,326,316,331,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8202.JPG,552,224,219,331,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8281.JPG,656,295,93,281,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8315 (1).JPG,473,380,242,286,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8365.JPG,488,267,335,359,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8389.JPG,779,308,257,266,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2837.JPG,574,402,160,258,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3078.JPG,515,301,223,367,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3295.JPG,561,363,105,280,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3311.JPG,499,86,182,603,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8777 (1).JPG,391,0,738,865,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0187.JPG,513,68,453,510,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0641.JPG,461,91,218,772,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8401.JPG,574,312,250,275,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8412.JPG,415,175,502,564,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8525 (1).JPG,450,202,317,466,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8634 (1).JPG,402,51,302,626,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8668 (1).JPG,522,387,133,266,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8772.JPG,680,360,77,254,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9033.JPG,257,114,573,617,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9315.JPG,277,167,667,664,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9480.JPG,330,55,768,758,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9838.JPG,738,310,270,267,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9972.JPG,757,367,178,178,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9988.JPG,561,376,169,171,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0515.JPG,291,5,747,746,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0535.JPG,524,243,254,255,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0983.JPG,498,436,142,219,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1253.JPG,503,225,386,489,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1693.JPG,558,380,145,270,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1881.JPG,508,249,236,389,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1884.JPG,521,313,193,306,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2122.JPG,534,12,173,695,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2151.JPG,488,338,156,406,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2206.JPG,463,280,401,484,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2405.JPG,410,49,371,692,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2420.JPG,522,416,149,247,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3564.JPG,549,381,173,171,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3649.JPG,668,328,187,188,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3729.JPG,364,268,396,404,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3841.JPG,260,405,207,201,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3863.JPG,273,109,589,595,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4001.JPG,509,58,173,717,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4114.JPG,404,191,348,348,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4229.JPG,470,214,216,368,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4669.JPG,519,83,318,671,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4940.JPG,446,325,447,474,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5139.JPG,432,295,365,403,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5203.JPG,421,231,359,515,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5856.JPG,553,291,261,297,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5892.JPG,605,55,409,651,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5407.JPG,347,91,632,625,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5475.JPG,540,162,235,515,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5672.JPG,476,279,378,381,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6631.JPG,446,309,241,359,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7041.JPG,411,54,591,678,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7055 (1).JPG,487,380,258,267,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7092 (1).JPG,367,210,503,503,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7139.JPG,581,240,177,217,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7154 (1).JPG,309,145,655,626,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7354.JPG,530,268,275,326,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7389.JPG,394,49,511,707,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7400 (1).JPG,483,56,334,687,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7460.JPG,411,32,500,737,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7511.JPG,547,305,191,229,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7578 (1).JPG,441,59,288,759,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7688.JPG,450,87,477,660,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7792 (1).JPG,406,104,655,656,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8029 (1).JPG,593,394,197,297,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8091 (1).JPG,631,315,201,397,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8187 (1).JPG,625,270,129,490,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8407.JPG,394,158,527,591,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8561 (1).JPG,496,420,157,223,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8660 (1).JPG,539,348,150,305,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8705 (1).JPG,609,372,130,376,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8734 (1).JPG,508,66,176,658,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9227.JPG,385,146,581,580,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9256.JPG,216,202,462,463,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9352.JPG,341,198,515,522,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9517.JPG,314,145,703,671,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9646.JPG,467,441,286,282,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9764.JPG,299,76,689,629,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0213.JPG,335,1,783,714,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0307.JPG,476,310,372,396,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0408.JPG,391,127,389,637,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0475.JPG,416,203,423,481,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1156.JPG,411,320,143,300,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1653.JPG,507,396,242,267,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1656.JPG,640,395,158,235,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1722.JPG,597,395,71,203,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2021.JPG,267,66,607,619,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2495.JPG,623,380,67,243,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3545.JPG,558,334,153,152,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3592.JPG,547,367,191,193,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3775.JPG,433,78,397,658,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4081.JPG,256,78,576,683,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4170.JPG,569,121,362,723,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4260.JPG,507,91,514,642,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4318.JPG,447,191,394,451,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4514.JPG,511,277,253,258,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4622.JPG,459,283,178,268,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5058.JPG,563,353,271,271,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5869.JPG,498,230,348,396,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6040.JPG,478,324,119,230,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6457.JPG,500,409,260,255,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6503.JPG,400,344,301,303,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6670.JPG,553,366,167,285,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6792.JPG,394,46,656,723,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6924.JPG,410,63,494,697,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6940 (1).JPG,375,94,402,646,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6979 (1).JPG,457,386,219,246,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7114 (1).JPG,621,390,265,265,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7259.JPG,550,271,239,318,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7260.JPG,564,289,218,292,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7310.JPG,457,211,372,399,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7369.JPG,414,112,483,618,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7446 (1).JPG,525,432,109,218,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7456.JPG,581,222,203,356,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7549 (1).JPG,572,49,169,754,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7599.JPG,475,345,243,275,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7626 (1).JPG,551,413,173,345,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7666.JPG,521,301,157,210,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7758 (1).JPG,405,65,701,711,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7984 (1).JPG,511,315,410,440,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7994 (1).JPG,547,419,287,310,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8006 (1).JPG,438,91,437,647,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8045.JPG,209,245,473,474,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8083 (1).JPG,553,187,289,554,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8117.JPG,522,125,455,547,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8142.JPG,527,186,315,400,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8168 (1).JPG,605,405,105,324,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8492 (1).JPG,512,255,369,401,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8725 (1).JPG,589,481,89,267,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8743 (1).JPG,590,150,132,464,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9021.JPG,366,17,730,767,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9087.JPG,150,113,543,646,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9163.JPG,4,2,620,846,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9391.JPG,355,213,481,497,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9506.JPG,404,194,557,552,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9537.JPG,602,447,272,271,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0516.JPG,346,40,678,680,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1273.JPG,409,289,334,367,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1348.JPG,557,361,239,262,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1613.JPG,349,253,479,504,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1667.JPG,526,329,232,353,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2426.JPG,530,432,117,183,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2606.JPG,381,222,472,516,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2752.JPG,383,158,588,598,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2808.JPG,511,219,317,459,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2938.JPG,514,348,90,267,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3192.JPG,422,85,376,573,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3194.JPG,439,105,367,558,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3228.JPG,425,51,315,613,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3324.JPG,589,371,95,294,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3401.JPG,458,289,315,319,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3506.JPG,614,458,137,150,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3535.JPG,406,336,153,153,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3544.JPG,567,336,152,153,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3819.JPG,288,106,619,657,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3958.JPG,399,226,431,443,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3973.JPG,512,256,356,410,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4201.JPG,564,323,221,386,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4265.JPG,442,163,410,522,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4295.JPG,559,269,204,235,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4296.JPG,561,265,204,234,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4458.JPG,523,241,344,343,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4933.JPG,430,197,651,667,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5070.JPG,516,345,291,296,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5198.JPG,597,303,182,384,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5518.JPG,468,271,210,354,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5671.JPG,476,275,385,390,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6264.JPG,561,329,296,357,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6272.JPG,574,391,247,291,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6466.JPG,426,403,327,322,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6775 (1).JPG,746,419,90,239,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6839 (1).JPG,406,14,300,774,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6843 (1).JPG,394,63,270,709,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7105.JPG,513,246,329,360,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7117.JPG,561,247,262,297,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7185.JPG,555,175,180,415,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7253.JPG,406,59,549,693,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7401 (1).JPG,539,106,306,626,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7534 (1).JPG,605,207,152,471,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7548 (1).JPG,588,15,177,776,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7623 (1).JPG,552,394,185,374,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7653 (1).JPG,558,420,207,336,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7790.JPG,477,85,468,743,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7938.JPG,422,343,208,296,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8400.JPG,602,314,249,276,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8415 (1).JPG,352,282,426,411,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8690.JPG,371,100,451,679,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8972.JPG,580,350,179,323,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8975.JPG,566,308,230,403,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8976.JPG,544,279,250,441,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9432.JPG,393,202,452,517,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9641.JPG,495,341,409,397,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9647.JPG,499,443,276,270,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9671.JPG,415,165,323,364,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9803.JPG,476,207,389,423,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9845.JPG,666,315,272,273,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0083.JPG,415,62,694,664,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0376.JPG,253,2,809,757,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0385.JPG,564,153,283,556,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0402.JPG,531,242,244,417,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0869.JPG,444,414,218,283,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0960.JPG,375,328,357,363,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0982.JPG,516,423,156,235,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1244.JPG,444,138,395,637,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1306.JPG,345,182,572,560,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1331.JPG,287,214,471,500,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1423.JPG,556,301,164,344,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2015.JPG,497,292,313,321,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3294.JPG,623,357,108,292,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3499.JPG,577,436,154,154,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4018.JPG,612,51,390,707,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4025.JPG,341,78,555,663,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4552.JPG,543,182,422,481,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4628.JPG,463,298,161,240,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5266.JPG,513,368,180,309,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5365.JPG,433,335,101,312,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5422.JPG,444,40,248,705,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5532.JPG,464,260,317,380,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5667.JPG,407,246,420,428,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5710.JPG,428,323,311,310,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5822.JPG,319,246,330,366,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5904.JPG,403,191,311,472,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5995.JPG,411,11,394,686,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6230.JPG,511,374,174,286,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6461.JPG,559,411,275,276,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6499.JPG,387,318,341,343,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6652.JPG,445,400,151,225,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6756 (1).JPG,341,124,301,655,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6805.JPG,452,215,393,447,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6978.JPG,477,32,373,742,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7003 (1).JPG,379,188,469,536,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7158.JPG,581,275,182,265,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7218 (1).JPG,318,90,666,662,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7526.JPG,428,154,512,551,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7615.JPG,443,339,267,307,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7801 (1).JPG,535,311,422,420,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7847 (1).JPG,258,82,764,698,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7877.JPG,251,424,95,230,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8067 (1).JPG,590,403,164,285,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8139 (1).JPG,645,448,118,269,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8163 (1).JPG,612,354,129,372,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8305.JPG,626,299,181,299,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8421.JPG,771,298,234,253,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8423 (1).JPG,389,347,340,333,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8454.JPG,567,302,182,228,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8556 (1).JPG,509,415,167,241,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8627.JPG,852,286,102,318,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8763.JPG,593,331,89,293,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_8962.JPG,611,399,142,227,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9141.JPG,529,352,211,299,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9363.JPG,358,41,764,756,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9594.JPG,369,262,324,330,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9633.JPG,353,160,672,614,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9697.JPG,384,320,305,306,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9809.JPG,323,235,382,383,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_9925.JPG,409,188,437,478,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0032.JPG,348,99,610,592,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0306.JPG,485,300,372,395,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0590.JPG,358,235,351,390,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0807.JPG,453,45,717,729,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_0811.JPG,349,126,607,614,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1247.JPG,476,132,479,623,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1332.JPG,316,249,411,442,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1606.JPG,383,302,411,413,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1607.JPG,403,268,464,470,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1632.JPG,488,383,268,290,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1709.JPG,523,334,160,342,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1858.JPG,581,385,119,206,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1923.JPG,319,218,311,433,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1934.JPG,367,47,541,634,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_1943.JPG,509,321,255,285,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2208.JPG,440,307,373,442,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2215.JPG,444,306,334,395,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2339.JPG,508,413,238,262,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2890.JPG,511,274,204,401,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_2900.JPG,511,163,259,519,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_3670.JPG,324,333,217,222,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4036.JPG,445,91,407,683,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4211.JPG,464,254,335,574,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4217.JPG,494,98,366,611,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4325.JPG,439,88,560,637,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4700.JPG,600,308,75,216,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4711.JPG,656,268,101,307,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_4761.JPG,476,109,203,672,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5045.JPG,391,253,475,468,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5268.JPG,487,351,196,334,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5372.JPG,435,385,80,254,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5665.JPG,395,244,439,448,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_5964.JPG,461,277,176,288,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6092.JPG,421,72,216,606,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6109.JPG,536,168,125,456,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6209.JPG,364,229,310,511,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6371.JPG,375,88,601,658,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6404.JPG,444,395,273,275,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6584.JPG,543,262,320,367,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6777 (1).JPG,662,420,90,242,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6814 (1).JPG,473,165,164,599,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6817 (1).JPG,444,226,149,505,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_6879 (1).JPG,409,166,233,541,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7052 (1).JPG,457,361,248,261,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7625.JPG,367,113,526,623,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7682.JPG,417,130,464,616,1
+/media/a/D/lockheed-martin/dataset/LM_dataset/Data_Training/IMG_7865.JPG,371,317,165,407,1
