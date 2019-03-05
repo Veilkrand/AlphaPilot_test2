@@ -14,13 +14,19 @@ class Corners:
 
     def process_image_path(self, path):
 
-        img_original = cv2.imread(path)
+        # img_original = cv2.imread(path)
+        # print(type(img_original))
 
-        img_prep = self.prepare_image(img_original)
+        # img_prep = self.prepare_image(img_original)
+        img_prep = self.prepare_image(path)
 
         img_shapes, shapes = self.find_quads(img_prep)
+        print(shapes)
 
         inner_shape = self.get_inner_area_corners_from_results(shapes)
+
+        if len(inner_shape) == 0:
+            return img_original , inner_shape
 
         img_result = self.draw_points_array(img_original, inner_shape)
 
@@ -32,7 +38,14 @@ class Corners:
         return image
 
     def get_inner_area_corners_from_results(self, results):
-        assert len(results) == 2, 'I got more than 2 shapes for a gate'
+        
+        if len(results) > 2:
+            print('file has more than 2 shapes for a gate, hence quitting ')
+            return []
+        elif len(results) < 2:
+            print('file has only one shape')
+            return []
+        # assert len(results) == 2, 'I got more than 2 shapes for a gate'
 
         inner_shape = None
 
@@ -41,7 +54,13 @@ class Corners:
         else:
             inner_shape = results[0]
 
-        assert len(inner_shape['corners']) == 5, 'I didn\'t all 5 points of the shape'
+        
+        # assert len(inner_shape['corners']) == 5, 'I didn\'t all 5 points of the shape'
+        if len(inner_shape['corners']) != 5:
+            print('number of points are : ', len(inner_shape['corners']))  
+            print('I didn\'t all 5 points of the shape')
+            return []
+
 
         corners = inner_shape['corners'][1:] # Skip centroid as first element of the points
         return corners

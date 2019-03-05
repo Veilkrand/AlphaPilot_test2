@@ -13,3 +13,4 @@ shrek/pytorch-deeplab-xception/run/
 !shrek/pytorch-deeplab-xception/run/.gitkeep
 
 object_segmentation_pipelines/Enet/for_Alberto/*
+object_segmentation_pipelines/Enet/datasets/*
