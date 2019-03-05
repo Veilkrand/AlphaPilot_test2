@@ -208,7 +208,7 @@ if resume_epoch != nEpochs:
 
     db_val = AlphaPilotSegmentation(
         input_dir='data/dataset/val/images', label_dir='data/dataset/val/labels',
-        transform=augs_test
+        transform=augs_test,
         input_only=None
     )
 
