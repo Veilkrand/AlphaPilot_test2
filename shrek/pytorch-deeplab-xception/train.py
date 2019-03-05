@@ -206,7 +206,7 @@ if resume_epoch != nEpochs:
         input_only=["gaus-blur", "grayscale", "gaus-noise", "brightness", "contrast", "hue-sat", "color-jitter"]
     )
 
-    db_val = AlphaPilotSegmentation(
+    db_validation = AlphaPilotSegmentation(
         input_dir='data/dataset/val/images', label_dir='data/dataset/val/labels',
         transform=augs_test,
         input_only=None
