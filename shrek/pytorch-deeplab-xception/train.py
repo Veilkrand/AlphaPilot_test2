@@ -39,7 +39,7 @@ args = parser.parse_args()
 # Setting parameters
 use_sbd = False  # Whether to use SBD dataset
 nEpochs = 100  # Number of epochs for training
-resume_epoch = 0   # Default is 0, change if want to resume
+resume_epoch = 10   # Default is 0, change if want to resume
 
 
 p = OrderedDict()  # Parameters to include in report
@@ -47,13 +47,13 @@ p['trainBatchSize'] = args.batch_size  # Training batch size
 testBatchSize = 1 # Testing batch size
 useTest = True  # See evolution of the test set when training
 nTestInterval = 1  # Run on test set every nTestInterval epochs
-snapshot = 10  # Store a model every snapshot epochs
+snapshot = 2  # Store a model every snapshot epochs
 
 p['nAveGrad'] = 1  # Average the gradient of several iterations
-p['lr'] = 1e-7  # Learning rate
+p['lr'] = 1e-4  # Learning rate
 p['wd'] = 5e-4  # Weight decay
 p['momentum'] = 0.9  # Momentum
-p['epoch_size'] = 10  # How many epochs to change learning rate
+p['epoch_size'] = 2  # How many epochs to change learning rate
 
 p['Model'] = 'deeplab'  # Choose model: unet or deeplab
 backbone = 'xception'  # For deeplab only: Use xception or resnet as feature extractor,
@@ -200,16 +200,17 @@ if resume_epoch != nEpochs:
     )
 
 
-    db_trainval = AlphaPilotSegmentation(
+    db_train = AlphaPilotSegmentation(
         input_dir='data/dataset/train/images', label_dir='data/dataset/train/labels',
         transform=augs_train,
         input_only=["gaus-blur", "grayscale", "gaus-noise", "brightness", "contrast", "hue-sat", "color-jitter"]
     )
 
-
-    train_size = int(0.95 * len(db_trainval))
-    test_size = len(db_trainval) - train_size
-    db_train, db_validation = torch.utils.data.random_split(db_trainval, [train_size, test_size])
+    db_val = AlphaPilotSegmentation(
+        input_dir='data/dataset/val/images', label_dir='data/dataset/val/labels',
+        transform=augs_test
+        input_only=None
+    )
 
     print('size db_train, db_val: ', len(db_train), len(db_validation))
 
