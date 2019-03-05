@@ -7,3 +7,9 @@ datasets/Data_LeaderboardTesting/
 datasets/Data_Training/
 model.png
 
+shrek/pytorch-deeplab-xception/data/
+!shrek/pytorch-deeplab-xception/data/.gitkeep
+shrek/pytorch-deeplab-xception/run/
+!shrek/pytorch-deeplab-xception/run/.gitkeep
+
+object_segmentation_pipelines/Enet/for_Alberto/*
