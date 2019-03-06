@@ -97,3 +97,22 @@ The measure of execution time is assessed according to the wall clock time for t
 
 - The measure of execution time is assessed according to the wall clock time for the `generate_submission.py` function to run `finalDetector.predict(img)` as defined by your class. That is, the time for the gate detector to read an image, extract the corners of the flyable region of the gate and output the label.
 - The total Algorithm Score is then calculated by subtracting the average wall clock time from teh weighted MAP score and multipying by 35 to get a maximum of 70 points: `Score = 35 * (2 * MAP - avg_time)`
+
+
+## Notes from Forum
+
+1. We might have to remove 6 images, saw this post on forum:
+```
+I found these 6 image files in the random_submission.json {'IMG_0898.JPG', 'IMG_0980.JPG', 'IMG_1525.JPG', 'IMG_7276 (1).JPG', 'IMG_7277 (1).JPG', 'IMG_8548.JPG'} while the test data does not contain these 6 images.
+In my leaderboard submission, there are total 1161 keys, which is slightly different from random_submission.json (1167). I'm wondering if this is a bug that caused my 0% leaderboard score (my flyable region detector definitely works).
+```
+
+2. This is the word from organizer:
+```
+Please check the random_submission.json in the starter scripts for an example and make sure you are following the same format for each image: "IMG_####.JPG": [[x1, y1, x2, y2, x3, y3, x4, y4, CS]]
+
+Here is an example: 
+"IMG_3668.JPG": [[370.3913304338685, 377.2051599830667, 7.742989976402814, 13.058747191455566, 246.50017198915896, 321.3924492511484, 342.11494534552276, 35.65517009139904, 0.5]]
+
+Empty gates should have the format: [[]]
+```
