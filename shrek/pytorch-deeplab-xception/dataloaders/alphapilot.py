@@ -104,8 +104,8 @@ class AlphaPilotSegmentation(Dataset):
         else:
             _label_tensor = torch.zeros((1, _img_tensor.shape[1], _img_tensor.shape[2]), dtype=torch.float32)
 
-        # return _img_tensor, _label_tensor, os.path.splitext(os.path.basename(self.datalist_input[index]))[0]
-        return _img_tensor, _label_tensor
+        return _img_tensor, _label_tensor, os.path.splitext(os.path.basename(self.datalist_input[index]))[0]
+        # return _img_tensor, _label_tensor
 
     def _activator_masks(self, images, augmenter, parents, default):
         if self.input_only and augmenter.name in self.input_only:

@@ -32,7 +32,8 @@ parser.add_argument("-o", "--output_stride", type=int, default=8, help="Output s
 args = parser.parse_args()
 
 
-testBatchSize = 1 # Testing batch size
+testBatchSize = 1  # Testing batch size
+conf_threshold = 0.6 # Any pixel below this confidence value will not be considered as a detection.
 results_store_dir = 'data/results'
 results_store_dir = os.path.join(results_store_dir, args.result_folder)
 output_masks_dir = os.path.join(results_store_dir, 'masks')
@@ -90,8 +91,7 @@ miou_per_class = [0] * args.num_of_classes
 num_images_per_class = [0] * args.num_of_classes
 for ii, sample_batched in enumerate(testloader):
     inputs, labels, sample_filename = sample_batched
-    print('inputs: ', inputs.shape, 'labels: ', labels.shape)
-    print('sample_filename: ', sample_filename[0])
+    print('  sample_filename: ', sample_filename[0])
 
     # Forward pass of the mini-batch
     inputs = inputs.to(device)
@@ -100,12 +100,13 @@ for ii, sample_batched in enumerate(testloader):
     with torch.no_grad():
         outputs = net.forward(inputs)
 
+    # Apply a min confidence threshold
+    outputs[outputs < conf_threshold] = 0
     predictions = torch.max(outputs, 1)[1]
 
     inputs = inputs.cpu()
     labels = labels.cpu().type(torch.FloatTensor)
     predictions = predictions.cpu().type(torch.FloatTensor)
-    print('predictions: ', predictions.shape)
 
     if args.label_images_path:
         _total_iou, per_class_iou, per_class_img_count = utils.get_iou(predictions, labels.squeeze(1), n_classes=args.num_of_classes)
@@ -123,8 +124,7 @@ for ii, sample_batched in enumerate(testloader):
     save_image(img_grid, os.path.join(results_store_dir, sample_filename[0] + '-results.png'))
 
     mask_out = predictions.squeeze(0).numpy() * 255
-    print('mask:', mask_out.shape, mask_out.dtype)
-    imageio.imwrite(os.path.join(results_store_dir, 'masks', sample_filename[0] + '.png'), mask_out)
+    imageio.imwrite(os.path.join(results_store_dir, 'masks', sample_filename[0] + '.png'), mask_out.astype(np.uint8))
 
     # Calculate mean IoU per class and overall
     print('  image num : %03d' % (ii * testBatchSize))
