@@ -17,22 +17,16 @@ class GenerateFinalDetections():
                                              imsize=512)
 
     def predict(self, img):
-
+        print('img', img.shape)
+        # Run inference on model
         mask = self.inference.inferenceOnNumpy(img)
+
+        # Get corners
+        mask_orig_size = cv2.resize(mask, (img.shape[1], img.shape[0]))
+        print('mask_orig_size', mask_orig_size.shape)
         poly, img_result = self.estimator.process_img(mask, gray=True)
-        poly = poly.tolist()
 
-        print('img_result:', img_result.shape)
-        print('poly:', len(poly), type(poly))
-
-        return poly
-
-        # np.random.seed(self.seed)
-        # n_boxes = np.random.randint(4)
-        # if n_boxes>0:
-        #     bb_all = 400*np.random.uniform(size = (n_boxes,9))
-        #     bb_all[:,-1] = 0.5
-        # else:
-        #     bb_all = []
-        # return bb_all.tolist()
-
+        # Convert numpy result to list
+        poly = np.reshape(poly, (1, 8))
+        list_coords = poly.astype(np.uint32).tolist()
+        return list_coords
