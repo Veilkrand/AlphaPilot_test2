@@ -17,7 +17,7 @@ img_keys = [img_i.split('/')[-1] for img_i in img_file]
 
 # Instantiate a new detector
 finalDetector = GenerateFinalDetections()
-# load image, convert to RGB, run model and plot detections. 
+# load image, convert to RGB, run model and plot detections.
 time_all = []
 pred_dict = {}
 for img_key in img_keys:
@@ -32,7 +32,7 @@ for img_key in img_keys:
 mean_time = np.mean(time_all)
 ci_time = 1.96*np.std(time_all)
 freq = np.round(1/mean_time,2)
-    
+
 print('95% confidence interval for inference time is {0:.2f} +/- {1:.4f}.'.format(mean_time,ci_time))
 print('Operating frequency from loading image to getting results is {0:.2f}.'.format(freq))
 
