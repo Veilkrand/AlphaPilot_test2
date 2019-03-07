@@ -20,10 +20,10 @@ class GenerateFinalDetections():
 
         mask = self.inference.inferenceOnNumpy(img)
         poly, img_result = self.estimator.process_img(mask, gray=True)
-
+        poly = poly.tolist()
 
         print('img_result:', img_result.shape)
-        print('poly:', len(poly))
+        print('poly:', len(poly), type(poly))
 
         return poly
 

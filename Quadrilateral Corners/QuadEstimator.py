@@ -62,11 +62,11 @@ class QuadEstimator():
 		#cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 
 		#_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-		
+
 		r = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 		# Fix for diferent versions of OpenCV
 		if len(r) == 3:
-			_, contours, hierarchy = r	
+			_, contours, hierarchy = r
 		elif len(r) == 2:
 			contours, hierarchy = r
 		else:
@@ -163,7 +163,7 @@ class QuadEstimator():
 						#print(hull)
 						mask_output = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)
 						cv2.drawContours(img_result, [hull], -1, (255,0,0), 3)
-						
+
 						print('hull corners: ', len(hull))
 
 						if len(hull)!=4:
@@ -199,14 +199,14 @@ class QuadEstimator():
 						for i in range(0, len(approx)):
 							#print(corners[i,0])
 							cv2.circle(img_result, (int(approx[i][0]), int(approx[i][1])), 10, (255,0,0), 5)
-						
-						
+
+
 
 					else: # less than 4 corners
 						# Try second pass approx
-						print('--- Second pass with 3 corners')						
+						print('--- Second pass with 3 corners')
 						hull = cv2.convexHull(c)
-						
+
 						cv2.drawContours(img_result, [hull], -1, (255,0,0), 3)
 
 						epsilon = 0.015 * cv2.arcLength(c,True) #0.085
@@ -214,14 +214,14 @@ class QuadEstimator():
 						print('3 corners second pass:',len(approx))
 						cv2.drawContours(img_result, [approx], -1, (0,0,255), 3)
 						approx = np.reshape(approx, (len(approx),2))
-						
+
 						if len(approx)==4:
 							result['solution_pass'] = 3
 							result['corners'] = approx
 
 							results.append(result)
-						
-					
+
+
 
 		return img_result, results
 
@@ -239,7 +239,7 @@ class QuadEstimator():
 		except:
 			print("** I got no shapes!")
 			return None
-			
+
 		if len(results) == 1:
 			print('** One candidate selected.')
 			inner_shape = results[0]
@@ -250,7 +250,7 @@ class QuadEstimator():
 				inner_shape = results[1]
 			else:
 				inner_shape = results[0]
-				
+
 		if inner_shape is not None and 'corners' in inner_shape and len(inner_shape['corners'])==4:
 			return inner_shape['corners']
 		else:
@@ -258,16 +258,16 @@ class QuadEstimator():
 
 	def process_img(self, img_original, gray=False):
 		img_bw = self._preprocess_img(img_original, gray)
-		
+
 		img_shapes, result = self._find_shapes(img_bw, img_original)
 
 		corners = self._get_inner_area_corners_from_results(result)
-		
+
 		return corners, img_shapes
-	
+
 	def process_img_path(self, img_path):
 		img_original = cv2.imread(img_path)
-		
+
 		corners, img_shapes = self.process_img(img_original)
 
 		if corners is not None and len(corners)>0:
@@ -275,6 +275,6 @@ class QuadEstimator():
 		else:
 			print('** No solution for:',img_path)
 			img_solution = img_shapes
-		
+
 		return corners, img_solution
 
