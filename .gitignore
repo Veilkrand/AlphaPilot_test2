@@ -6,6 +6,8 @@ __pycache__/
 datasets/Data_LeaderboardTesting/
 datasets/Data_Training/
 model.png
+submission/
+.vscode/
 
 shrek/pytorch-deeplab-xception/data/
 !shrek/pytorch-deeplab-xception/data/.gitkeep

@@ -3,10 +3,10 @@ import cv2
 
 
 class QuadEstimator():
-	
+
 	def __init__(self, params = None):
 		pass
-		
+
 		if params is None:
 			self.params = {
 				'MIN_SHAPE_AREA' : 250,
@@ -15,15 +15,15 @@ class QuadEstimator():
 				'DRAW_DEBUG_IMAGES' : True
 			}
 
-		
+
 	def _draw_points_array(self, image, points, color=(255,0,0), size=7):
-		if points is not None: 
+		if points is not None:
 			for i in range(0, len(points)):
 				cv2.circle(image, (int(points[i,0]), int(points[i,1])), 10, color, size)
-				
+
 		return image
 
-	
+
 	def _preprocess_img(self, img_original, gray=False, threshold_bw=50, blur=5):
 
 		if gray is False:
@@ -33,25 +33,25 @@ class QuadEstimator():
 
 		img_blur =  cv2.GaussianBlur(img_gray, (blur, blur), 0)
 		img_bw = cv2.threshold(img_blur,threshold_bw,255,cv2.THRESH_BINARY)[1]
-		
+
 		return img_bw
-	
+
 
 	### Do I need???
 	def find_and_draw_contours(self, img_path):
-		
+
 		img_original = cv2.imread(img_path)
-		
+
 		img_bw = self.preprocess_img(img_original)
-		
+
 		cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 		cnts = imutils.grab_contours(cnts)
-		
+
 		for index,c in enumerate(cnts):
 			cv2.drawContours(img_original, [c], -1, (0,255,0), 3)
 		return img_bw
 
-	
+
 	def _find_corners_from_approx(self, img_bw, approx):
 		# create mask for edge detection
 		gray = np.float32(img_bw)
@@ -64,17 +64,18 @@ class QuadEstimator():
 		ret, labels, stats, centroids = cv2.connectedComponentsWithStats(dst)
 		criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.001)
 		corners = cv2.cornerSubPix(gray,np.float32(centroids),(5,5),(-1,-1),criteria)
-		
+
 		return corners
-	
+
 	def _find_shapes(self, img_bw, img_original, debug=True):
-		
+
 
 		img_result = img_original.copy()
 
 		results = []
 
 		#cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+<<<<<<< HEAD
 		#_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 		
 		r = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
@@ -83,13 +84,16 @@ class QuadEstimator():
 			contours, hierarchy = r
 		else:
 			_, contours, hierarchy = r	
+=======
+		_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+>>>>>>> 0865d3586d717b99c0f8096ff88f9f52a4563a4b
 
 		if debug is True:
 			print('Contours:', len(contours))
 			cv2.drawContours(img_result, contours, -1, (0,255,0), 3)
 
 		#cnts = imutils.grab_contours(cnts)
-				
+
 		for index, c in enumerate(contours):
 
 
@@ -99,26 +103,26 @@ class QuadEstimator():
 			if debug:
 				cv2.drawContours(img_result, approx, -1, (255, 0, 0), 3)
 				print('* Shape', index,'countours',len(c),'with',len(approx),'approx')
-			
+
 
 			# 4 sides?
 			if (len(approx)>2):
-				
+
 				cv2.drawContours(img_result, [c], -1, (0, 255, 0), 5)
 
 				#(x, y, w, h) = cv2.boundingRect(approx)
 				#cv2.rectangle(img_result,(x,y),(x+w,y+h),(0,0,255),3)
 				#print('Shape:',index,'x, y, w, h, corners:',x, y, w, h, len(approx))
-				
+
 				area = cv2.contourArea(approx)
-				
-				
-				
-				
+
+
+
+
 				if (area>self.params['MIN_SHAPE_AREA']):
-					
+
 					print('- Area:',area)
-					
+
 					result = {}
 					result['area'] = area
 
@@ -147,7 +151,7 @@ class QuadEstimator():
 					if len(corners)!=4 and len(approx)==4:
 						print('Harris failed! using approx instead')
 						corners = np.reshape(approx, (len(approx),2))
-					
+
 					## --- Corners result logic
 					if len(corners)==4:
 
@@ -236,19 +240,19 @@ class QuadEstimator():
 					
 
 		return img_result, results
-	
+
 
 
 	def _get_inner_area_corners_from_results(self, results):
 		print(results)
-		try: 
-			assert len(results)<3        
+		try:
+			assert len(results)<3
 		except:
 			print('** I got more than 2 shapes for a gate...', len(results))
-			
-		try: 
+
+		try:
 			assert len(results)>0
-		except: 
+		except:
 			print("** I got no shapes!")
 			return None
 			
@@ -272,7 +276,7 @@ class QuadEstimator():
 		img_bw = self._preprocess_img(img_original, gray)
 		
 		img_shapes, result = self._find_shapes(img_bw, img_original)
-		
+
 		corners = self._get_inner_area_corners_from_results(result)
 		
 		return corners, img_shapes
