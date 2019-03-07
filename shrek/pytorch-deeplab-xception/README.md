@@ -17,7 +17,7 @@ mv Data_LeaderboardTesting/* .
 rm -rf Data_LeaderboardTesting
 ```
 
-Download the model checkpoint from Shreeyak's [alphapilot](https://drive.google.com/drive/folders/1kWv8mx87RwPk5vDd1BM6Z9ttOPr__Pu2?usp=sharing) shared Google Drive folder. The checkpoints are saved at `alphapilot -> deeplabv3 -> checkpoints`.
+Download the model checkpoint from Shreeyak's [alphapilot](https://drive.google.com/drive/folders/1kWv8mx87RwPk5vDd1BM6Z9ttOPr__Pu2?usp=sharing) shared Google Drive folder. The checkpoints are saved at `alphapilot -> deeplabv3 -> <model> -> checkpoints`.
 
 Run the inference:
 
