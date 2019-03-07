@@ -37,7 +37,6 @@ args = parser.parse_args()
 
 
 # Setting parameters
-use_sbd = False  # Whether to use SBD dataset
 nEpochs = 100  # Number of epochs for training
 resume_epoch = 10   # Default is 0, change if want to resume
 
@@ -53,7 +52,7 @@ p['nAveGrad'] = 1  # Average the gradient of several iterations
 p['lr'] = 1e-6  # Learning rate
 p['wd'] = 5e-4  # Weight decay
 p['momentum'] = 0.9  # Momentum
-p['epoch_size'] = 2  # How many epochs to change learning rate
+p['epoch_size'] = 4  # How many epochs to change learning rate
 
 p['Model'] = 'deeplab'  # Choose model: unet or deeplab
 backbone = 'xception'  # For deeplab only: Use xception or resnet as feature extractor,
@@ -173,23 +172,29 @@ if resume_epoch != nEpochs:
 
     augs_train = iaa.Sequential([
         # Geometric Augs
-        iaa.Scale((imsize, imsize), 0),
+        iaa.Resize((imsize, imsize), 0),
         iaa.Fliplr(0.5),
         iaa.Flipud(0.5),
         iaa.Rot90((0, 4)),
+
         # Blur and Noise
-        #iaa.Sometimes(0.2, iaa.GaussianBlur(sigma=(0, 1.5), name="gaus-blur")),
-        #iaa.Sometimes(0.1, iaa.Grayscale(alpha=(0.0, 1.0), from_colorspace="RGB", name="grayscale")),
-        # iaa.Sometimes(0.2, iaa.AdditiveLaplaceNoise(scale=(0, 0.1*255), per_channel=True, name="gaus-noise")),
-        # Color, Contrast, etc.
-        iaa.Sometimes(0.2, iaa.Multiply((0.75, 1.25), per_channel=0.1, name="brightness")),
-        iaa.Sometimes(0.2, iaa.GammaContrast((0.7, 1.3), per_channel=0.1, name="contrast")),
-        iaa.Sometimes(0.2, iaa.AddToHueAndSaturation((-20, 20), name="hue-sat")),
-        iaa.Sometimes(0.3, iaa.Add((-20, 20), per_channel=0.5, name="color-jitter")),
+        iaa.Sometimes(0.15, iaa.OneOf([iaa.GaussianBlur(sigma=(1.5, 2.5), name="gaus_blur"),
+                                    iaa.MotionBlur(k=13, angle=[0, 180, 270, 360], direction=[-1.0, 1.0],
+                                                    name='motion_blur'),
+                                    ])),
+
+        # Color, Contrast, etc
+        iaa.Sometimes(0.5, iaa.CoarseDropout(0.05, size_px=(2,4), per_channel=1.0, min_size=2, name='dropout')),
+
+        iaa.SomeOf((0, None), [ iaa.Sometimes(0.5, iaa.GammaContrast((0.5, 1.5), name="contrast")),
+                                iaa.Sometimes(0.5, iaa.Multiply((0.40, 1.60), per_channel=1.0, name="multiply")),
+                                iaa.Sometimes(0.5, iaa.AddToHueAndSaturation((-30, 30), name="hue_sat")),
+                            ]),
     ])
+
     augs_test = iaa.Sequential([
         # Geometric Augs
-        iaa.Scale((imsize, imsize), 0),
+        iaa.Resize((imsize, imsize), interpolation='cubic'),
     ])
 
 
@@ -203,7 +208,7 @@ if resume_epoch != nEpochs:
     db_train = AlphaPilotSegmentation(
         input_dir='data/dataset/train/images', label_dir='data/dataset/train/labels',
         transform=augs_train,
-        input_only=["gaus-blur", "grayscale", "gaus-noise", "brightness", "contrast", "hue-sat", "color-jitter"]
+        input_only=["gaus_blur", "motion_blur", "dropout", "contrast", "multiply",  "hue_sat"]
     )
 
     db_validation = AlphaPilotSegmentation(

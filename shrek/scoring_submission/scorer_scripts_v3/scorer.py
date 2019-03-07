@@ -35,9 +35,12 @@ class mAPScorer():
             if img_key in pred_data.keys():
                 pred_box = pred_data[img_key]
             else:
-                pred_box = []
+                pred_box = [[]]
+            # if a ground truth box is present
+            if not pred_box:
+                pred_box = [[]]
             #if a ground predicitons are present:
-            if (len(pred_box) > 0):
+            if (len(pred_box[0]) > 0):
                 tp_fp_cf_i = self.metrics(
                                           np.array(GT_box),
                                           np.array(pred_box), self.THRESHOLD)
@@ -65,9 +68,10 @@ class mAPScorer():
                 pred_box = pred_data[img_key]
             else:
                 pred_box = [[]]
-            # if a ground truth box is presen
-
-            if (len(pred_box) > 0) :
+            # if a ground truth box is present
+            if not pred_box:
+                pred_box = [[]]
+            if (len(pred_box[0]) > 0) :
                 tp_fp_cf_i = self.metrics(
                                           np.array(GT_box),
                                           np.array(pred_box),
