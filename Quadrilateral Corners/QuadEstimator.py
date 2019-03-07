@@ -80,10 +80,12 @@ class QuadEstimator():
 		
 		r = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 		# Fix for diferent versions of OpenCV
-		if len(r) == 2:
+		if len(r) == 3:
+			_, contours, hierarchy = r	
+		elif len(r) == 2:
 			contours, hierarchy = r
 		else:
-			_, contours, hierarchy = r	
+			contours = r
 
 		if debug is True:
 			print('Contours:', len(contours))
