@@ -6,7 +6,6 @@ __pycache__/
 datasets/Data_LeaderboardTesting/
 datasets/Data_Training/
 model.png
-submission/
 .vscode/
 
 shrek/pytorch-deeplab-xception/data/
@@ -14,6 +13,9 @@ shrek/pytorch-deeplab-xception/data/
 shrek/pytorch-deeplab-xception/run/
 !shrek/pytorch-deeplab-xception/run/.gitkeep
 shrek/pytorch-deeplab-xception/pytorch-lr-finder/
+
+shrek/scoring_submission/submission/checkpoint/
+shrek/scoring_submission/submission/testing/
 
 object_segmentation_pipelines/Enet/for_Alberto/*
 object_segmentation_pipelines/Enet/datasets/*
