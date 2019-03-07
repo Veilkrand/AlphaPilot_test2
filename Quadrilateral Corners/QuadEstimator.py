@@ -75,7 +75,15 @@ class QuadEstimator():
 		results = []
 
 		#cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-		_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+
+		#_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+		
+		r = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+		# Fix for diferent versions of OpenCV
+		if len(r) == 2:
+			contours, hierarchy = r
+		else:
+			_, contours, hierarchy = r	
 
 		if debug is True:
 			print('Contours:', len(contours))
