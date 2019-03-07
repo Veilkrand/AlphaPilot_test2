@@ -24,7 +24,6 @@ class GenerateFinalDetections():
 
         print('img_result:', img_result.shape)
         print('poly:', len(poly))
-        poly.append(1.0)
 
         return poly
 
