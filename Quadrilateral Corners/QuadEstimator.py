@@ -37,21 +37,6 @@ class QuadEstimator():
 		return img_bw
 
 
-	### Do I need???
-	def find_and_draw_contours(self, img_path):
-
-		img_original = cv2.imread(img_path)
-
-		img_bw = self.preprocess_img(img_original)
-
-		cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-		cnts = imutils.grab_contours(cnts)
-
-		for index,c in enumerate(cnts):
-			cv2.drawContours(img_original, [c], -1, (0,255,0), 3)
-		return img_bw
-
-
 	def _find_corners_from_approx(self, img_bw, approx):
 		# create mask for edge detection
 		gray = np.float32(img_bw)
