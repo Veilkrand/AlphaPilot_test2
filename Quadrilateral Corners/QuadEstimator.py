@@ -24,8 +24,13 @@ class QuadEstimator():
 		return image
 
 	
-	def _preprocess_img(self, img_original, threshold_bw=50, blur=5):
-		img_gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
+	def _preprocess_img(self, img_original, gray=False, threshold_bw=50, blur=5):
+
+		if gray is False:
+			img_gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
+		else:
+			img_gray = img_original
+
 		img_blur =  cv2.GaussianBlur(img_gray, (blur, blur), 0)
 		img_bw = cv2.threshold(img_blur,threshold_bw,255,cv2.THRESH_BINARY)[1]
 		
@@ -232,23 +237,25 @@ class QuadEstimator():
 		else:
 			return None
 
-	def process_img(self, img_original):
-		img_bw = self._preprocess_img(img_original)
+	def process_img(self, img_original, gray=False):
+		img_bw = self._preprocess_img(img_original, gray)
 		
 		img_shapes, result = self._find_shapes(img_bw, img_original)
 		
 		corners = self._get_inner_area_corners_from_results(result)
 		
-		if corners is not None and len(corners)>0:
-			img_solution = self._draw_points_array(img_original.copy(), corners)
-		else:
-			print('** No solution for:',img_path)
-			return None, img_shapes
-		
-		return corners, img_solution
+		return corners, img_shapes
 	
 	def process_img_path(self, img_path):
 		img_original = cv2.imread(img_path)
 		
-		return self.process_img(img_original)
+		corners, img_shapes = self.process_img(img_original)
+
+		if corners is not None and len(corners)>0:
+			img_solution = self._draw_points_array(img_original.copy(), corners)
+		else:
+			print('** No solution for:',img_path)
+			img_solution = img_shapes
+		
+		return corners, img_solution
 
