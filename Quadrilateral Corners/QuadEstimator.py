@@ -127,15 +127,17 @@ class QuadEstimator():
 					ret, labels, stats, centroids = cv2.connectedComponentsWithStats(dst)
 					criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.001)
 					corners = cv2.cornerSubPix(mask, np.float32(centroids),(5,5),(-1,-1),criteria) # (5,5)
-					
 					# first element is a centroid we dont need
 					corners = corners[1:]
 
-					#corners = self.find_corners_from_approx(img_bw, approx)
-					
+					print('Harris corners:',len(corners), 'approx corners:', len(approx))
 
-					## --- Corners result logc
+					# Handling weird cases
+					if len(corners)!=4 and len(approx)==4:
+						print('Harris failed! using approx instead')
+						corners = np.reshape(approx, (len(approx),2))
 					
+					## --- Corners result logic
 					if len(corners)==4:
 
 						print('--- First pass solution')
@@ -149,6 +151,8 @@ class QuadEstimator():
 
 						result['solution_pass'] = 1
 						result['corners'] = corners
+
+						results.append(result)
 
 					elif len(corners)>4:
 
@@ -187,30 +191,36 @@ class QuadEstimator():
 						for i in range(0, len(approx)):
 							#print(corners[i,0])
 							cv2.circle(img_result, (int(approx[i][0]), int(approx[i][1])), 10, (255,0,0), 5)
-					
 						
-					results.append(result)
+						results.append(result)
 
+					else: # less than 4 corners
+						pass
+
+					
 
 		return img_result, results
 	
 
 
 	def _get_inner_area_corners_from_results(self, results):
+		print(results)
 		try: 
 			assert len(results)<3        
 		except:
-			print('*** I got more than 2 shapes for a gate...', len(results))
+			print('** I got more than 2 shapes for a gate...', len(results))
 			
 		try: 
 			assert len(results)>0
 		except: 
-			print("*** I got no shapes!")
+			print("** I got no shapes!")
 			return None
 			
 		if len(results) == 1: 
+			print('** One candidate selected.')
 			inner_shape = results[0]
 		else: # TODO: Address more than 2 condidates
+			print('** Two candidates. Selecting the bigger area')
 			inner_shape = None
 			if results[0]['area'] > results[1]['area']:
 				inner_shape = results[1]
@@ -222,10 +232,7 @@ class QuadEstimator():
 		else:
 			return None
 
-	
-	def process_img_path(self, img_path):
-		img_original = cv2.imread(img_path)
-
+	def process_img(self, img_original):
 		img_bw = self._preprocess_img(img_original)
 		
 		img_shapes, result = self._find_shapes(img_bw, img_original)
@@ -239,4 +246,9 @@ class QuadEstimator():
 			return None, img_shapes
 		
 		return corners, img_solution
+	
+	def process_img_path(self, img_path):
+		img_original = cv2.imread(img_path)
+		
+		return self.process_img(img_original)
 
