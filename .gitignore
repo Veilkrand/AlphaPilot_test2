@@ -1,3 +1,7 @@
+solution/checkpoints/
+solution/input_images/
+*.zip
+
 .DS_Store
 __pycache__/
 *.py[cod]
