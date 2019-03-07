@@ -75,7 +75,7 @@ class QuadEstimator():
 		results = []
 
 		#cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-<<<<<<< HEAD
+
 		#_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 		
 		r = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
@@ -84,9 +84,6 @@ class QuadEstimator():
 			contours, hierarchy = r
 		else:
 			_, contours, hierarchy = r	
-=======
-		_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
->>>>>>> 0865d3586d717b99c0f8096ff88f9f52a4563a4b
 
 		if debug is True:
 			print('Contours:', len(contours))
