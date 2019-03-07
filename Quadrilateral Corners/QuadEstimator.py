@@ -24,8 +24,13 @@ class QuadEstimator():
 		return image
 
 
-	def _preprocess_img(self, img_original, threshold_bw=50, blur=5):
-		img_gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
+	def _preprocess_img(self, img_original, gray=False, threshold_bw=50, blur=5):
+
+		if gray is False:
+			img_gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
+		else:
+			img_gray = img_original
+
 		img_blur =  cv2.GaussianBlur(img_gray, (blur, blur), 0)
 		img_bw = cv2.threshold(img_blur,threshold_bw,255,cv2.THRESH_BINARY)[1]
 
@@ -120,7 +125,6 @@ class QuadEstimator():
 
 
 					### --- Harris corners
-
 					dst = cv2.cornerHarris(mask,5,3,0.02) # 5, 3, 0.04
 					ret, dst = cv2.threshold(dst,0.1*dst.max(),255,0)
 					dst = np.uint8(dst)
@@ -156,6 +160,7 @@ class QuadEstimator():
 
 					elif len(corners)>4:
 
+
 						# Try hull convex approach
 
 
@@ -163,20 +168,25 @@ class QuadEstimator():
 						#print(hull)
 						mask_output = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)
 						cv2.drawContours(img_result, [hull], -1, (255,0,0), 3)
+						
+						print('hull corners: ', len(hull))
 
 						if len(hull)!=4:
 							print('--- Third pass solution')
 							# Try second pass approx
-							epsilon = 0.05*cv2.arcLength(c,True) #0.085
+							epsilon = self.params['EPSILON_K_SECOND'] * cv2.arcLength(c,True) #0.085
 							approx = cv2.approxPolyDP(hull,epsilon,True)
+
 							cv2.drawContours(img_result, [approx], -1, (0,255,0), 3)
 
 							approx = np.reshape(approx, (len(approx),2))
 
-							print(len(approx))
+							print('corners', len(approx))
 
 							result['solution_pass'] = 3
 							result['corners'] = approx
+							if len(approx)==4:
+								results.append(result)
 
 						else:
 							print('--- Second pass solution')
@@ -187,17 +197,36 @@ class QuadEstimator():
 
 							result['solution_pass'] = 2
 							result['corners'] = approx
+							if len(approx)==4:
+								results.append(result)
+
 						# Draw circles
 						for i in range(0, len(approx)):
 							#print(corners[i,0])
 							cv2.circle(img_result, (int(approx[i][0]), int(approx[i][1])), 10, (255,0,0), 5)
-
-						results.append(result)
+						
+						
 
 					else: # less than 4 corners
-						pass
+						# Try second pass approx
+						print('--- Second pass with 3 corners')						
+						hull = cv2.convexHull(c)
+						
+						cv2.drawContours(img_result, [hull], -1, (255,0,0), 3)
 
+						epsilon = 0.015 * cv2.arcLength(c,True) #0.085
+						approx = cv2.approxPolyDP(hull,epsilon,True)
+						print('3 corners second pass:',len(approx))
+						cv2.drawContours(img_result, [approx], -1, (0,0,255), 3)
+						approx = np.reshape(approx, (len(approx),2))
+						
+						if len(approx)==4:
+							result['solution_pass'] = 3
+							result['corners'] = approx
 
+							results.append(result)
+						
+					
 
 		return img_result, results
 
@@ -215,40 +244,42 @@ class QuadEstimator():
 		except:
 			print("** I got no shapes!")
 			return None
-
+			
 		if len(results) == 1:
 			print('** One candidate selected.')
 			inner_shape = results[0]
 		else: # TODO: Address more than 2 condidates
 			print('** Two candidates. Selecting the bigger area')
 			inner_shape = None
-			if results[0]['area'] > results[1]['area']:
+			if results[0]['area'] > results[1]['area'] and len(results[0]['corners'])==4:
 				inner_shape = results[1]
 			else:
 				inner_shape = results[0]
-
-		if inner_shape is not None and 'corners' in inner_shape:
+				
+		if inner_shape is not None and 'corners' in inner_shape and len(inner_shape['corners'])==4:
 			return inner_shape['corners']
 		else:
 			return None
 
-	def process_img(self, img_original):
-		img_bw = self._preprocess_img(img_original)
-
+	def process_img(self, img_original, gray=False):
+		img_bw = self._preprocess_img(img_original, gray)
+		
 		img_shapes, result = self._find_shapes(img_bw, img_original)
 
 		corners = self._get_inner_area_corners_from_results(result)
+		
+		return corners, img_shapes
+	
+	def process_img_path(self, img_path):
+		img_original = cv2.imread(img_path)
+		
+		corners, img_shapes = self.process_img(img_original)
 
 		if corners is not None and len(corners)>0:
 			img_solution = self._draw_points_array(img_original.copy(), corners)
 		else:
 			print('** No solution for:',img_path)
-			return None, img_shapes
-
+			img_solution = img_shapes
+		
 		return corners, img_solution
-
-	def process_img_path(self, img_path):
-		img_original = cv2.imread(img_path)
-
-		return self.process_img(img_original)
 
