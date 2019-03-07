@@ -3,10 +3,10 @@ import cv2
 
 
 class QuadEstimator():
-	
+
 	def __init__(self, params = None):
 		pass
-		
+
 		if params is None:
 			self.params = {
 				'MIN_SHAPE_AREA' : 250,
@@ -15,38 +15,38 @@ class QuadEstimator():
 				'DRAW_DEBUG_IMAGES' : True
 			}
 
-		
+
 	def _draw_points_array(self, image, points, color=(255,0,0), size=7):
-		if points is not None: 
+		if points is not None:
 			for i in range(0, len(points)):
 				cv2.circle(image, (int(points[i,0]), int(points[i,1])), 10, color, size)
-				
+
 		return image
 
-	
+
 	def _preprocess_img(self, img_original, threshold_bw=50, blur=5):
 		img_gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
 		img_blur =  cv2.GaussianBlur(img_gray, (blur, blur), 0)
 		img_bw = cv2.threshold(img_blur,threshold_bw,255,cv2.THRESH_BINARY)[1]
-		
+
 		return img_bw
-	
+
 
 	### Do I need???
 	def find_and_draw_contours(self, img_path):
-		
+
 		img_original = cv2.imread(img_path)
-		
+
 		img_bw = self.preprocess_img(img_original)
-		
+
 		cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 		cnts = imutils.grab_contours(cnts)
-		
+
 		for index,c in enumerate(cnts):
 			cv2.drawContours(img_original, [c], -1, (0,255,0), 3)
 		return img_bw
 
-	
+
 	def _find_corners_from_approx(self, img_bw, approx):
 		# create mask for edge detection
 		gray = np.float32(img_bw)
@@ -59,11 +59,11 @@ class QuadEstimator():
 		ret, labels, stats, centroids = cv2.connectedComponentsWithStats(dst)
 		criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.001)
 		corners = cv2.cornerSubPix(gray,np.float32(centroids),(5,5),(-1,-1),criteria)
-		
+
 		return corners
-	
+
 	def _find_shapes(self, img_bw, img_original, debug=True):
-		
+
 
 		img_result = img_original.copy()
 
@@ -71,13 +71,13 @@ class QuadEstimator():
 
 		#cnts = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 		_, contours, hierarchy = cv2.findContours(img_bw, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-	   
+
 		if debug is True:
 			print('Contours:', len(contours))
 			cv2.drawContours(img_result, contours, -1, (0,255,0), 3)
 
 		#cnts = imutils.grab_contours(cnts)
-				
+
 		for index, c in enumerate(contours):
 
 
@@ -87,26 +87,26 @@ class QuadEstimator():
 			if debug:
 				cv2.drawContours(img_result, approx, -1, (255, 0, 0), 3)
 				print('* Shape', index,'countours',len(c),'with',len(approx),'approx')
-			
+
 
 			# 4 sides?
 			if (len(approx)>2):
-				
+
 				cv2.drawContours(img_result, [c], -1, (0, 255, 0), 5)
 
 				#(x, y, w, h) = cv2.boundingRect(approx)
 				#cv2.rectangle(img_result,(x,y),(x+w,y+h),(0,0,255),3)
 				#print('Shape:',index,'x, y, w, h, corners:',x, y, w, h, len(approx))
-				
+
 				area = cv2.contourArea(approx)
-				
-				
-				
-				
+
+
+
+
 				if (area>self.params['MIN_SHAPE_AREA']):
-					
+
 					print('- Area:',area)
-					
+
 					result = {}
 					result['area'] = area
 
@@ -120,7 +120,7 @@ class QuadEstimator():
 
 
 					### --- Harris corners
-					
+
 					dst = cv2.cornerHarris(mask,5,3,0.02) # 5, 3, 0.04
 					ret, dst = cv2.threshold(dst,0.1*dst.max(),255,0)
 					dst = np.uint8(dst)
@@ -136,7 +136,7 @@ class QuadEstimator():
 					if len(corners)!=4 and len(approx)==4:
 						print('Harris failed! using approx instead')
 						corners = np.reshape(approx, (len(approx),2))
-					
+
 					## --- Corners result logic
 					if len(corners)==4:
 
@@ -163,7 +163,7 @@ class QuadEstimator():
 						#print(hull)
 						mask_output = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)
 						cv2.drawContours(img_result, [hull], -1, (255,0,0), 3)
-						
+
 						if len(hull)!=4:
 							print('--- Third pass solution')
 							# Try second pass approx
@@ -191,32 +191,32 @@ class QuadEstimator():
 						for i in range(0, len(approx)):
 							#print(corners[i,0])
 							cv2.circle(img_result, (int(approx[i][0]), int(approx[i][1])), 10, (255,0,0), 5)
-						
+
 						results.append(result)
 
 					else: # less than 4 corners
 						pass
 
-					
+
 
 		return img_result, results
-	
+
 
 
 	def _get_inner_area_corners_from_results(self, results):
 		print(results)
-		try: 
-			assert len(results)<3        
+		try:
+			assert len(results)<3
 		except:
 			print('** I got more than 2 shapes for a gate...', len(results))
-			
-		try: 
+
+		try:
 			assert len(results)>0
-		except: 
+		except:
 			print("** I got no shapes!")
 			return None
-			
-		if len(results) == 1: 
+
+		if len(results) == 1:
 			print('** One candidate selected.')
 			inner_shape = results[0]
 		else: # TODO: Address more than 2 condidates
@@ -226,7 +226,7 @@ class QuadEstimator():
 				inner_shape = results[1]
 			else:
 				inner_shape = results[0]
-				
+
 		if inner_shape is not None and 'corners' in inner_shape:
 			return inner_shape['corners']
 		else:
@@ -234,21 +234,21 @@ class QuadEstimator():
 
 	def process_img(self, img_original):
 		img_bw = self._preprocess_img(img_original)
-		
+
 		img_shapes, result = self._find_shapes(img_bw, img_original)
-		
+
 		corners = self._get_inner_area_corners_from_results(result)
-		
+
 		if corners is not None and len(corners)>0:
 			img_solution = self._draw_points_array(img_original.copy(), corners)
 		else:
 			print('** No solution for:',img_path)
 			return None, img_shapes
-		
+
 		return corners, img_solution
-	
+
 	def process_img_path(self, img_path):
 		img_original = cv2.imread(img_path)
-		
+
 		return self.process_img(img_original)
 

@@ -27,13 +27,14 @@ parser.add_argument("-l", "--label_images_path", required=True, help="Path to te
 parser.add_argument("-c", "--checkpoint_path", required=True, help="Path to a checkpoint file to be loaded")
 parser.add_argument("-r", "--result_folder", default="", help="prefix to be added to name of file, saved to data/results")
 parser.add_argument("-s", "--imsize", type=int, default=512, help="Size to resize the imgs to before feeding into network")
+parser.add_argument("-t", "--conf_threshold", type=float, default=0.6, help="Results below this conf will be discarded")
 parser.add_argument("-n", "--num_of_classes", type=int, default=2, help="Num of classes in the checkpoint to be loaded")
 parser.add_argument("-o", "--output_stride", type=int, default=8, help="Output stride of deeplab model")
 args = parser.parse_args()
 
 
 testBatchSize = 1  # Testing batch size
-conf_threshold = 0.6 # Any pixel below this confidence value will not be considered as a detection.
+conf_threshold = args.conf_threshold # Any pixel below this confidence value will not be considered as a detection.
 results_store_dir = 'data/results'
 results_store_dir = os.path.join(results_store_dir, args.result_folder)
 output_masks_dir = os.path.join(results_store_dir, 'masks')
