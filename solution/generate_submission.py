@@ -9,9 +9,10 @@ from random import shuffle
 from generate_results import *
 import time
 
+folder = 'input_images/'
 
-# img_file = glob.glob('testing/images/*.JPG')
-img_file = glob.glob('testing/images/*.JPG')
+img_file = glob.glob(folder + '*.JPG')
+#img_file = glob.glob('testing/images/*.JPG')
 img_keys = [img_i.split('/')[-1] for img_i in img_file]
 
 
@@ -22,7 +23,7 @@ finalDetector = GenerateFinalDetections()
 time_all = []
 pred_dict = {}
 for img_key in img_keys:
-    img =cv2.imread('testing/images/'+img_key)
+    img =cv2.imread(folder+img_key)
     img =cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     tic = time.monotonic()
     bb_all = finalDetector.predict(img)

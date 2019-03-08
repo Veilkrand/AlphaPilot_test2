@@ -72,13 +72,16 @@ class GenerateFinalDetections():
         
         corners, img_corners = self.estimator.process_img(img_resized_mask, gray=True)
         
-        ordered_corners = self.order_points(corners)
-        poly = ordered_corners.flatten().tolist()
+        if corners is not None:
+            ordered_corners = self.order_points(corners)
+            poly = ordered_corners.flatten().tolist()
 
-        poly.append(0.5)
+            poly.append(0.5)
 
-        result = []
-        result.append(poly)
+            result = []
+            result.append(poly)
+        else:
+            result = [[]]
 
         print('Solution', result)
         
