@@ -21,7 +21,7 @@ class GenerateFinalDetections():
         self.estimator = QuadEstimator()
 
 
-        model_checkpoint = 'checkpoints/deeplabv3plus-xception_epoch-11.pth'
+        model_checkpoint = 'checkpoints/checkpoints.pth'
         # Load inference
         # NOTE: set map_location='cpu' if CUDA is not available
         self.inference = inferenceAlphaPilot(checkpoint_path=model_checkpoint,
