@@ -20,6 +20,7 @@ shrek/pytorch-deeplab-xception/pytorch-lr-finder/
 
 shrek/scoring_submission/submission/checkpoint/
 shrek/scoring_submission/submission/testing/
+shrek/scoring_submission/dataset/Data_Test_Leaderboard_masks
 
 object_segmentation_pipelines/Enet/for_Alberto/*
 object_segmentation_pipelines/Enet/datasets/*

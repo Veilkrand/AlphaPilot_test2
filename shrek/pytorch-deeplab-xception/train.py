@@ -10,7 +10,7 @@ from PIL import Image
 import argparse
 from imgaug import augmenters as iaa
 import imgaug as ia
-
+from tqdm import tqdm
 
 # PyTorch includes
 import torch
@@ -38,7 +38,7 @@ args = parser.parse_args()
 
 # Setting parameters
 nEpochs = 100  # Number of epochs for training
-resume_epoch = 10   # Default is 0, change if want to resume
+resume_epoch = 40   # Default is 0, change if want to resume
 
 
 p = OrderedDict()  # Parameters to include in report
@@ -69,11 +69,11 @@ def save_test_img(inputs, outputs, ii):
 
     # Input RGB img
     rgb_img = inputs[0]
-    inv_normalize = transforms.Normalize(
-        mean=[-0.5 / 0.5, -0.5 / 0.5, -0.5 / 0.5],
-        std=[1 / 0.5, 1 / 0.5, 1 / 0.5]
-    )
-    rgb_img = inv_normalize(rgb_img)
+    # inv_normalize = transforms.Normalize(
+    #     mean=[-0.5 / 0.5, -0.5 / 0.5, -0.5 / 0.5],
+    #     std=[1 / 0.5, 1 / 0.5, 1 / 0.5]
+    # )
+    # rgb_img = inv_normalize(rgb_img)
     rgb_img = rgb_img.detach().cpu().numpy()
     rgb_img = np.transpose(rgb_img, (1, 2, 0))
 
@@ -89,7 +89,7 @@ def save_test_img(inputs, outputs, ii):
     ax1.imshow(output_rgb)
     ax1.set_title('Inference result')
 
-    fig.savefig('data/results/%04d-results.png' % (ii))
+    fig.savefig('data/results/current_training_model/%04d-results.png' % (ii))
     plt.close('all')
 
 
@@ -178,18 +178,22 @@ if resume_epoch != nEpochs:
         iaa.Rot90((0, 4)),
 
         # Blur and Noise
-        iaa.Sometimes(0.15, iaa.OneOf([iaa.GaussianBlur(sigma=(1.5, 2.5), name="gaus_blur"),
+        iaa.Sometimes(0.10, iaa.OneOf([iaa.GaussianBlur(sigma=(1.5, 2.5), name="gaus_blur"),
                                     iaa.MotionBlur(k=13, angle=[0, 180, 270, 360], direction=[-1.0, 1.0],
                                                     name='motion_blur'),
                                     ])),
 
         # Color, Contrast, etc
-        iaa.Sometimes(0.5, iaa.CoarseDropout(0.05, size_px=(2,4), per_channel=1.0, min_size=2, name='dropout')),
+        iaa.Sometimes(0.30, iaa.CoarseDropout(0.05, size_px=(2, 4), per_channel=0.5, min_size=2, name='dropout')),
 
-        iaa.SomeOf((0, None), [ iaa.Sometimes(0.5, iaa.GammaContrast((0.5, 1.5), name="contrast")),
-                                iaa.Sometimes(0.5, iaa.Multiply((0.40, 1.60), per_channel=1.0, name="multiply")),
-                                iaa.Sometimes(0.5, iaa.AddToHueAndSaturation((-30, 30), name="hue_sat")),
+        iaa.SomeOf((0, None), [ iaa.Sometimes(0.15, iaa.GammaContrast((0.5, 1.5), name="contrast")),
+                                iaa.Sometimes(0.15, iaa.Multiply((0.40, 1.60), per_channel=1.0, name="multiply")),
+                                iaa.Sometimes(0.15, iaa.AddToHueAndSaturation((-30, 30), name="hue_sat")),
                             ]),
+
+        # Affine
+        iaa.Sometimes(0.10, iaa.Affine(scale={"x": (0.5, 0.7), "y": 1.0})),
+        iaa.Sometimes(0.10, iaa.Affine(scale=(0.5, 0.7))),
     ])
 
     augs_test = iaa.Sequential([
@@ -199,7 +203,7 @@ if resume_epoch != nEpochs:
 
 
     db_test = AlphaPilotSegmentation(
-        input_dir='data/dataset/test', label_dir='data/dataset/test',
+        input_dir='data/dataset/test/images', label_dir='data/dataset/test/labels',
         transform=augs_test,
         input_only=None
     )
@@ -221,7 +225,7 @@ if resume_epoch != nEpochs:
 
     trainloader = DataLoader(db_train, batch_size=p['trainBatchSize'], shuffle=True, num_workers=32, drop_last=True)
     validationloader = DataLoader(db_validation, batch_size=p['trainBatchSize'], shuffle=False, num_workers=32, drop_last=True)
-    testloader = DataLoader(db_test, batch_size=testBatchSize, shuffle=False, num_workers=32, drop_last=True)
+    testloader = DataLoader(db_test, batch_size=p['trainBatchSize'], shuffle=False, num_workers=32, drop_last=True)
 
     utils.generate_param_report(os.path.join(save_dir, exp_name + '.txt'), p)
 
@@ -250,14 +254,14 @@ for epoch in range(resume_epoch, nEpochs):
 
     net.train()
 
-    for ii, sample_batched  in enumerate(trainloader):
+    for ii, sample_batched  in enumerate(tqdm(trainloader)):
         inputs, labels, sample_filename = sample_batched
 
         inputs = inputs.to(device)
         labels = labels.to(device)
         global_step += 1
 
-        print('iter_num: ', ii + 1, '/', num_img_tr)
+        # print('iter_num: ', ii + 1, '/', num_img_tr)
         writer.add_scalar('Epoch Num', epoch, global_step)
 
         torch.set_grad_enabled(True)
@@ -321,11 +325,16 @@ for epoch in range(resume_epoch, nEpochs):
 
         net.eval()
         images_list = []
-        dataloader_list = [validationloader] # ,testloader
+        dataloader_list = [validationloader, testloader]
         for dataloader in dataloader_list:
             total_iou = 0.0
 
-            for ii, sample_batched in enumerate(dataloader):
+            if dataloader == validationloader:
+                print("Validation Running")
+            if dataloader == testloader:
+                print("Testing Running")
+
+            for ii, sample_batched in enumerate(tqdm(dataloader)):
                 inputs, labels, sample_filename = sample_batched
 
                 # Forward pass of the mini-batch
@@ -343,6 +352,7 @@ for epoch in range(resume_epoch, nEpochs):
 
                 # run validation dataset
                 if dataloader == validationloader:
+                    # print('iter_num: ', ii + 1, '/', num_img_val)
                     running_loss_val += loss.item()
 
                     _total_iou, per_class_iou, num_images_per_class = utils.get_iou(predictions, labels, n_classes=num_of_classes)
@@ -376,6 +386,7 @@ for epoch in range(resume_epoch, nEpochs):
 
 
                 if dataloader == testloader:
+                    # print('iter_num: ', ii + 1, '/', num_img_ts)
                     running_loss_ts += loss.item()
 
                     _total_iou, per_class_iou, num_images_per_class = utils.get_iou(predictions, labels, n_classes=num_of_classes)
@@ -384,7 +395,7 @@ for epoch in range(resume_epoch, nEpochs):
                     save_test_img(inputs, outputs, ii)
                     if ii % num_img_ts == num_img_ts - 1:
                         # Calculate the loss and plot the graph
-                        miou = total_iou / (ii * testBatchSize + inputs.shape[0])
+                        miou = total_iou / (ii * p['trainBatchSize'] + inputs.shape[0])
                         running_loss_ts = running_loss_ts / num_img_ts
 
                         print('Test:')
