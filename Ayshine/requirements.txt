@@ -1,0 +1,12 @@
+mathematics==1.0.0
+matplotlib==3.0.3
+mpmath==1.1.0
+numpy==1.16.2
+opencv-python==4.0.0.21
+Pillow==5.4.1
+scipy==1.2.1
+scipy-stack==0.0.5
+Shapely==1.6.4.post2
+torch==1.0.1.post2
+torchvision==0.2.2.post3
+
