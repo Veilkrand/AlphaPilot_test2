@@ -1,6 +1,9 @@
 solution/checkpoints/
+solution/FINAL_SUBMISSION_ZIP/checkpoints/
 solution/input_images/
 *.zip
+
+
 
 .DS_Store
 __pycache__/
