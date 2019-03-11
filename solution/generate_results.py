@@ -9,7 +9,6 @@ from inference_alphapilot import inferenceAlphaPilot
 # Estimator imports
 from QuadEstimator import QuadEstimator
 
-
 class GenerateFinalDetections():
 
 
@@ -61,22 +60,26 @@ class GenerateFinalDetections():
         
         h, w = img_original.shape[:2]
 
-        img_bgr = cv2.cvtColor(img_original, cv2.COLOR_BGR2RGB)
-        
+
+        #img_bgr = cv2.cvtColor(img_original, cv2.COLOR_BGR2RGB)
+        img_bgr = img_original.copy()
 
         print('--- Runing inference ---')
         img_mask = self.inference.inferenceOnNumpy(img_bgr)
         
+
         #img_resized_mask = cv2.resize(img_mask, (1296, 864)) 
         img_resized_mask = cv2.resize(img_mask, (w, h))
-        
+    
+
         corners, img_corners = self.estimator.process_img(img_resized_mask, gray=True)
         
+
         if corners is not None:
             ordered_corners = self.order_points(corners)
             poly = ordered_corners.flatten().tolist()
 
-            poly.append(0.5)
+            poly.append(1.0)
 
             result = []
             result.append(poly)
