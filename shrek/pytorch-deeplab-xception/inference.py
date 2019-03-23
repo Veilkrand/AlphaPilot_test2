@@ -102,7 +102,7 @@ for ii, sample_batched in enumerate(testloader):
         outputs = net.forward(inputs)
 
     # Apply a min confidence threshold
-    outputs[outputs < conf_threshold] = 0
+    # outputs[outputs < conf_threshold] = 0
     predictions = torch.max(outputs, 1)[1]
 
     inputs = inputs.cpu()

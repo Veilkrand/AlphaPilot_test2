@@ -1,35 +1,32 @@
+import argparse
+import glob
+import os
 import socket
 import timeit
-from datetime import datetime
-import os
-import glob
 from collections import OrderedDict
-from matplotlib import pyplot as plt
-import numpy as np
-from PIL import Image
-import argparse
-from imgaug import augmenters as iaa
-import imgaug as ia
-from tqdm import tqdm
+from datetime import datetime
 
+import numpy as np
 # PyTorch includes
 import torch
-import torch.optim as optim
-from torchvision import transforms
-from torch.utils.data import DataLoader
-from torchvision.utils import make_grid
 import torch.nn as nn
+import torch.optim as optim
+from matplotlib import pyplot as plt
+from PIL import Image
+from torch.utils.data import DataLoader
+from torchvision import transforms
+from torchvision.utils import make_grid
+from tqdm import tqdm
 
-
-# Tensorboard include
-from tensorboardX import SummaryWriter
-
+import imgaug as ia
+from dataloaders import utils
 # Custom includes
 from dataloaders.alphapilot import AlphaPilotSegmentation
-from dataloaders import utils
-from networks import deeplab_xception, deeplab_resnet
+from imgaug import augmenters as iaa
 # from dataloaders import custom_transforms as tr
-from networks import unet
+from networks import deeplab_resnet, deeplab_xception, unet
+# Tensorboard include
+from tensorboardX import SummaryWriter
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-b", "--batch_size", required=True, type=int, help="Num of images per batch for training")
@@ -37,8 +34,8 @@ args = parser.parse_args()
 
 
 # Setting parameters
-nEpochs = 100  # Number of epochs for training
-resume_epoch = 40   # Default is 0, change if want to resume
+nEpochs = 66  # Number of epochs for training
+resume_epoch = 54   # Default is 0, change if want to resume
 
 
 p = OrderedDict()  # Parameters to include in report
@@ -50,9 +47,9 @@ snapshot = 2  # Store a model every snapshot epochs
 
 p['nAveGrad'] = 1  # Average the gradient of several iterations
 p['lr'] = 1e-6  # Learning rate
-p['wd'] = 5e-4  # Weight decay
+p['wd'] = 5e-2  # Weight decay
 p['momentum'] = 0.9  # Momentum
-p['epoch_size'] = 4  # How many epochs to change learning rate
+p['epoch_size'] = 1  # How many epochs to change learning rate
 
 p['Model'] = 'deeplab'  # Choose model: unet or deeplab
 backbone = 'xception'  # For deeplab only: Use xception or resnet as feature extractor,
@@ -223,9 +220,9 @@ if resume_epoch != nEpochs:
 
     print('size db_train, db_val: ', len(db_train), len(db_validation))
 
-    trainloader = DataLoader(db_train, batch_size=p['trainBatchSize'], shuffle=True, num_workers=32, drop_last=True)
-    validationloader = DataLoader(db_validation, batch_size=p['trainBatchSize'], shuffle=False, num_workers=32, drop_last=True)
-    testloader = DataLoader(db_test, batch_size=p['trainBatchSize'], shuffle=False, num_workers=32, drop_last=True)
+    trainloader = DataLoader(db_train, batch_size=p['trainBatchSize'], shuffle=True, num_workers=4, drop_last=True)
+    validationloader = DataLoader(db_validation, batch_size=p['trainBatchSize'], shuffle=False, num_workers=4, drop_last=True)
+    testloader = DataLoader(db_test, batch_size=p['trainBatchSize'], shuffle=False, num_workers=4, drop_last=True)
 
     utils.generate_param_report(os.path.join(save_dir, exp_name + '.txt'), p)
 
@@ -269,6 +266,7 @@ for epoch in range(resume_epoch, nEpochs):
 
         labels = labels.squeeze(1)
         loss = criterion(outputs, labels, size_average=False, batch_average=True)
+
         running_loss_tr += loss.item()
 
         # Print stuff
@@ -420,5 +418,3 @@ for epoch in range(resume_epoch, nEpochs):
 
 
 writer.close()
-
-

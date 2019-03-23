@@ -70,7 +70,7 @@ if p['Model'] == 'deeplab':
     criterion = utils.cross_entropy2d
 else:
     raise NotImplementedError
-    
+
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 #criterion = criterion.to(device) #TODO: IS THIS NEEDED?
 
